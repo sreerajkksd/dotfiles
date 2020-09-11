@@ -9,35 +9,53 @@ Configurations are managed by `dotstow <https://github.com/codejamninja/dotstow>
 
 To install:
 
-- Install stow and dotstow
+- Install gnu stow
 
     .. code-block:: bash
 
-        sudo apt install stow
-        npm install dotstow
+        # For Ubuntu users
+        $ sudo apt install stow
+
+        # For redhat (dnf managed distros)
+        $ sudo dnf install stow
+
+- Upgrade nodejs to the minimum version of 12. (You can use nvm to configure as well)
+
+    .. code-block:: bash
+
+        # For ubuntu
+        $ sudo apt install build-essential apt-transport-https lsb-release ca-certificates curl
+        $ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+        $ which node npm
+
+- Install dotstow
+
+    .. code-block:: bash
+
+        $ npm install dotstow
 
 - Download your dotfiles
 
     .. code-block:: bash
 
-        dotstow sync
+        $ ~/node_modules/.bin/dotstow sync
 
 - Manual init
 
     .. code-block:: bash
 
-        ~/.dotfiles/manual-init.sh
+        $ ~/.dotfiles/manual-init.sh
 
 - Set the configs
 
     .. code-block:: bash
 
-        dotstow stow bash git i3 systems tmux vim vscode zsh
+        $ ~/node_modules/.bin/dotstow stow bash git i3 systems tmux vim vscode zsh
 
 
 - To update the configs
 
- - Upload changes the repository in github.
+ - Upload changes the repository and commit the changes.
  - Run `dotstow sync`
 
 
