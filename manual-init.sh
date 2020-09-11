@@ -21,8 +21,8 @@ echo "Setup fzf"
 echo "Setting up fasd"
 cd ~/.fasd
 PREFIX=$HOME make install
-fasd --init auto
+$HOME/bin/fasd --init auto
 
 cd $HOME
 
-
+echo "Open vim and run :PlugInstall"

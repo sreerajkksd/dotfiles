@@ -9,17 +9,18 @@ Configurations are managed by `dotstow <https://github.com/codejamninja/dotstow>
 
 To install:
 
-- Install dotstow
+- Install stow and dotstow
 
     .. code-block:: bash
 
-        npm install -g dotstow
+        sudo apt install stow
+        npm install dotstow
 
 - Download your dotfiles
 
     .. code-block:: bash
 
-        dotstow sync GITHUB_REPO_LINK
+        dotstow sync
 
 - Manual init
 
@@ -31,7 +32,7 @@ To install:
 
     .. code-block:: bash
 
-        dotstow stow bash git i3 system tmux vim vscode zsh
+        dotstow stow bash git i3 systems tmux vim vscode zsh
 
 
 - To update the configs

@@ -12,6 +12,7 @@ function check_and_source {
 }
 
 check_and_source ~/.bash_functions
+check_and_source ~/.aliases
 
 # If not running interactively, don't do anything from now onwards.
 [ -z "$PS1" ] && return
@@ -22,14 +23,14 @@ check_and_source ~/bash_completion.d/_auto_completions.bash
 who=`whoami`
 
 if [ "${who}" == "${LOGNAME}" ]; then
-    UA=""
+    UA="$who@"
     COLOR="38;5;141m"
 else
     UA="$who@"
     COLOR="38;5;155m"
 fi
 
-PS1='\[\e[$COLOR\][$?][\D{%T }${UA}$HOST \w]> \[\e[m\]'
+PS1='\[\e[$COLOR\][$?][\D{%T }${UA}${HOSTNAME} \w]> \[\e[m\]'
 export PROMPT_DIRTRIM=2
 
 # Set default visual editor
