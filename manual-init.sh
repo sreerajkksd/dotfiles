@@ -8,6 +8,9 @@ git clone -q --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 echo "bash fasd: https://github.com/clvv/fasd.git to ~/.fasd"
 git clone -q --depth 1 https://github.com/clvv/fasd.git ~/.fasd
 
+echo "zsh ohm-my-zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 echo "tmux tpm: https://github.com/tmux-plugins/tpm to ~/.tmux/plugins/tpm"
 git clone -q --depth 1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
@@ -25,4 +28,5 @@ $HOME/bin/fasd --init auto
 
 cd $HOME
 
-echo "Open vim and run :PlugInstall"
+echo "Installing vim plugins"
+vim +'PlugInstall --sync' +qa

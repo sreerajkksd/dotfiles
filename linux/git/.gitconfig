@@ -1,27 +1,27 @@
 [user]
-	name = Sreeraj.Karichery
-	email = sreerajmylatty@gmail.com
+    name = Sreeraj Karichery
+    email = sreerajmylatty@gmail.com
 
 [alias]
     # View abbreviated SHA, description, and history graph of the latest 20 commits.
-	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+    l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
     # List contributors with number of commits.
-	contributors = shortlog --summary --numbered
+    contributors = shortlog --summary --numbered
 
     # Show the user email for the current repository.
-	whoami = config user.email
+    whoami = config user.email
 
 [branch]
-	# Show most recently changed branches first.
-	sort = -committerdate
+    # Show most recently changed branches first.
+    sort = -committerdate
 
 [core]
-	pager = less -r
+    pager = less -r
 
 [diff]
-	# Detect copies as well as renames.
-	renames = copies
+    # Detect copies as well as renames.
+    renames = copies
 
 [filter "lfs"]
     required = true
@@ -30,4 +30,4 @@
     process = git-lfs filter-process
 
 [help]
-	autoCorrect = 1
+    autoCorrect = 1
