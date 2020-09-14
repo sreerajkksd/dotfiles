@@ -23,6 +23,9 @@ DISABLE_AUTO_UPDATE="true"
 # Uncomment the following line to automatically update without prompting.
 DISABLE_UPDATE_PROMPT="true"
 
+# Turn off all beeps
+unsetopt BEEP
+
 #History setup
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=100000

@@ -34,7 +34,8 @@ alias pstree='pstree -haspg '
 alias mkdate='mkdir `date +%Y-%m-%d`'
 alias finduser='getent passwd | grep -i '
 alias list-dep='systemctl list-dependencies'
-alias source-all='source ~/.bashrc  ~/.bash_functions'
+alias source-bash='source ~/.bashrc'
+alias source-zsh='source ~/.zshrc'
 alias drop-caches='sudo sh -c "echo 3 > /proc/sys/vm/drop_caches"'
 alias strip="sed 's/^[ \t]*//;s/[ \t]*$//'"
 
