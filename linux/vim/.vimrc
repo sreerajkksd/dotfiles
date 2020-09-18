@@ -13,6 +13,20 @@ Plug 'morhetz/gruvbox'
 Plug 'chrisbra/improvedft'
 Plug 'ntpeters/vim-better-whitespace'
 
+" fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+" Multiple cursors using Ctrl + N in normal view
+Plug 'terryma/vim-multiple-cursors'
+
+" Run :Rename or :SudoWrite and other commands directly
+Plug 'tpope/vim-eunuch'
+
+" editor config
+Plug 'editorconfig/editorconfig-vim'
+
+
 call plug#end()
 
 set autoread
@@ -85,10 +99,10 @@ cnoreabbrev Q q
 
 " use w!! to override sudo
 cmap w!! w !sudo tee % >/dev/null
+
 noremap <C-S-up> ddkP
 noremap <C-S-down> ddp
 nnoremap <Space> i
-nnoremap <F5> :! perl %
 nnoremap <F6> :! python %
 nnoremap <F7> :set paste
 nnoremap <F9> :set invnumber<CR>
@@ -104,9 +118,10 @@ if has("autocmd")
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
 
-" nnoremap <c-> :tabnew<CR>
 nnoremap <C-S-tab> :tabprevious<CR>
 nnoremap <C-tab>   :tabnext<CR>
 inoremap <C-S-tab> <Esc>:tabprevious<CR>i
 inoremap <C-tab>   <Esc>:tabnext<CR>i
-" nnoremap <C-w> :tabclose<CR>
+
+" Open Files using FZF
+map ; :Files<CR>" nnoremap <c-> :tabnew<CR>
