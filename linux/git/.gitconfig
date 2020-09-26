@@ -31,3 +31,6 @@
 
 [help]
     autoCorrect = 1
+
+[pull]
+	rebase = true

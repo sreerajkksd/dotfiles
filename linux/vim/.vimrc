@@ -26,6 +26,8 @@ Plug 'tpope/vim-eunuch'
 " editor config
 Plug 'editorconfig/editorconfig-vim'
 
+Plug 'powerline/powerline'
+Plug 'preservim/nerdtree'
 
 call plug#end()
 
@@ -124,4 +126,4 @@ inoremap <C-S-tab> <Esc>:tabprevious<CR>i
 inoremap <C-tab>   <Esc>:tabnext<CR>i
 
 " Open Files using FZF
-map ; :Files<CR>" nnoremap <c-> :tabnew<CR>
+map \ :Files<CR>" nnoremap <c-> :tabnew<CR>

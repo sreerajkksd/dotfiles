@@ -1,19 +1,5 @@
 #!/usr/bin/env bash
 
-# Update the repository
-function up {
-    if ! cvs status 2>&1 | grep -q "No CVSROOT specified"; then
-        cvs update -ACPdR
-    elif ! svn -v status 2>&1 | grep -q "is not a working copy"; then
-        svn update
-    elif ! git status 2>&1 | grep -q "Not a git repository"; then
-        git pull --rebase
-    else
-        echo "Not a git/svn/cvs working directory"
-    fi
-}
-
-
 #open script
 function vi-which { vim $(which $1); }
 function which-vi { vim $(which $1); }
