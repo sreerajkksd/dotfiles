@@ -1,7 +1,4 @@
-# Created by newuser for 5.0.2
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/.aliases ] && source ~/.aliases
+[ -f ~/.zsh_aliases ] && source ~/.zsh_aliases
 
 # load custom executable functions
 for function in ~/.zsh/functions/*; do
@@ -9,7 +6,7 @@ for function in ~/.zsh/functions/*; do
 done
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/karicher/.oh-my-zsh"
+export ZSH="/home/$USER/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -53,6 +50,8 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
+# Vim as the default editor
+export EDITOR=vim
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
