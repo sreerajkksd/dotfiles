@@ -7,7 +7,7 @@ This is my collection of `configuration files <http://dotfiles.github.io/>`_.
 Configurations are managed by `dotstow <https://github.com/codejamninja/dotstow>`_
 
 
-To install:
+To setup:
 
 - Install gnu stow
 
@@ -34,17 +34,12 @@ To install:
 
         $ npm install dotstow
 
-- Download your dotfiles
+- Download your dotfiles and bootstrap the environment
 
     .. code-block:: bash
 
-        $ ~/node_modules/.bin/dotstow sync
+        $ ~/node_modules/.bin/dotstow bootstrap --remote https://github.com/sreerajkksd/dotfiles.git
 
-- Manual init
-
-    .. code-block:: bash
-
-        $ ~/.dotfiles/manual-init.sh
 
 - Set the configs
 
@@ -52,15 +47,31 @@ To install:
 
         $ ~/node_modules/.bin/dotstow stow bash git i3 systems tmux vim vscode zsh
 
+And we are done. You should see symlinks on your home directory for all the dotfiles and others.
+
+- To pull the configs from the remote
+    .. code-block:: bash
+
+        $ ~/node_modules/.bin/dotstow pull
+
 
 - To update the configs
 
  - Upload changes the repository and commit the changes.
  - Run `dotstow sync`
 
+Note:
+
+- If you only have stow installed and want only to update certain configs (without touching others eg: on a work environment), you can do the following
+  .. code-block:: bash
+
+       $ git clone -q --depth 1 https://github.com/sreerajkksd/dotfiles.git ~/.dotfiles
+       $ stow -t /home/$USER -d /home/$USER/.dotfiles/<Environment>/ <package>
+       $ stow -t /home/$USER -d /home/$USER/.dotfiles/global vim
+
 
 =======
 Credits
 =======
 
- - Sreeraj Karichery (sreerajkarichery@outlook.com)
+ - Sreeraj Karichery (sreerajmylatty@gmail.com)
