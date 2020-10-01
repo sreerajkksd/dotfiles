@@ -60,3 +60,5 @@ export EDITOR=vim
 plugins=(git z aws fzf)
 
 source $ZSH/oh-my-zsh.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
