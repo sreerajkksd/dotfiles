@@ -2,7 +2,7 @@
 Dotfiles
 ========
 
-This is my collection of `configuration files <http://dotfiles.github.io/>`_.
+This is my collection of `configuration files <http://dotfiles.github.io/>`_ for bash, vim, zsh, tmux and plenty others.
 
 Configurations are managed by `dotstow <https://github.com/codejamninja/dotstow>`_
 
@@ -14,7 +14,7 @@ To setup:
     .. code-block:: bash
 
         # For Ubuntu users
-        $ sudo apt install stow
+        $ sudo apt update -y; sudo apt install stow -y
 
         # For redhat (dnf managed distros)
         $ sudo dnf install stow
@@ -45,7 +45,7 @@ To setup:
 
     .. code-block:: bash
 
-        $ ~/node_modules/.bin/dotstow stow bash git i3 systems tmux vim vscode zsh
+        $ ~/node_modules/.bin/dotstow stow bash git i3 systems tmux vim vscode zsh -f
 
 And we are done. You should see symlinks on your home directory for all the dotfiles and others.
 
