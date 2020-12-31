@@ -14,6 +14,8 @@ function check_and_source {
 check_and_source ~/.bash_functions
 check_and_source ~/.aliases
 
+export PATH=$HOME/bin:$PATH:/nix/profiles/sreerajkksd/default/bin
+
 # If not running interactively, don't do anything from now onwards.
 [ -z "$PS1" ] && return
 
