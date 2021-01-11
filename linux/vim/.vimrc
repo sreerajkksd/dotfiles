@@ -9,25 +9,23 @@ set vb
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'morhetz/gruvbox'
-Plug 'chrisbra/improvedft'
-Plug 'ntpeters/vim-better-whitespace'
+Plug 'morhetz/gruvbox'                  " color scheme
+Plug 'chrisbra/improvedft'              " ft to search multiple lines
+Plug 'ntpeters/vim-better-whitespace'   " Display trailing whitespaces
 
 " fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" Multiple cursors using Ctrl + N in normal view
-Plug 'terryma/vim-multiple-cursors'
-
-" Run :Rename or :SudoWrite and other commands directly
-Plug 'tpope/vim-eunuch'
+Plug 'terryma/vim-multiple-cursors'     " Multiple cursors using Ctrl + N in normal view
+Plug 'tpope/vim-eunuch'                 " Run :Rename or :SudoWrite and other commands directly
+Plug 'tpope/vim-commentary'             " gc to comment lines
 
 " editor config
-Plug 'editorconfig/editorconfig-vim'
+Plug 'editorconfig/editorconfig-vim'    " Editor config plugin
 
-Plug 'powerline/powerline'
-Plug 'preservim/nerdtree'
+Plug 'powerline/powerline'              " Powerline
+Plug 'preservim/nerdtree'               " FileTree View
 
 call plug#end()
 
